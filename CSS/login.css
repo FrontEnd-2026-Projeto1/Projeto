@@ -1,0 +1,26 @@
+.formulario-cartao {
+    width: min(100%, 440px);
+    margin: 32px 0;
+}
+
+.formulario-cartao h1 {
+    margin-top: 0;
+}
+
+.grupo-campos {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    border: 0;
+}
+
+.grupo-campos legend {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.alternativa-formulario {
+    margin-top: 18px;
+    text-align: center;
+}
