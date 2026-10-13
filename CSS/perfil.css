@@ -1,0 +1,47 @@
+.perfil-cartao {
+    margin-bottom: 24px;
+}
+
+.perfil-identificacao {
+    display: grid;
+    gap: 8px;
+}
+
+.perfil-identificacao .sobretitulo {
+    margin-bottom: 0;
+}
+
+.formulario-padrao input[readonly] {
+    background: #eee;
+}
+
+.tabela-wrapper {
+    margin-bottom: 24px;
+    overflow-x: auto;
+    background: white;
+}
+
+.tabela-padrao {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabela-padrao caption {
+    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.tabela-padrao th, .tabela-padrao td {
+    padding: 10px;
+    border: 1px solid var(--borda);
+}
+
+.tabela-padrao thead {
+    background: #e6edf3;
+}
+
+.status-pedido {
+    font-weight: bold;
+}

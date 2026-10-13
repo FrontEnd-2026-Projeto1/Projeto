@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu perfil | AdriExpress</title>
+        <link rel="stylesheet" href="../CSS/base.css">
+        <link rel="stylesheet" href="../CSS/perfil.css">
+    </head>
+    <body>
+        <header class="cabecalho">
+            <div class="cabecalho-principal">
+                <a class="marca" href="index.html" aria-label="AdriExpress - início"><span>Adri</span>Express</a>
+                <input class="menu" type="checkbox" id="menu">
+                <label class="menu-icone" for="menu" aria-label="Abrir ou fechar menu"></label>
+                <nav class="navegacao" aria-label="Navegação principal">
+                    <a href="index.html">Início</a>
+                    <a href="loja.html">Produtos</a>
+                    
+                    <a href="Contato.html">Contato</a>
+                    <a href="cadastro.html">Cadastro</a>
+                    <a href="login.html">Entrar</a>
+                    <a href="perfil.html" aria-current="page">Perfil</a>
+                    <a href="relatorios.html">Administração</a>
+                </nav>
+            </div>
+        </header>
+        <main class="pagina">
+
+            <section class="introducao-pagina">
+                <p class="sobretitulo">Sua conta</p>
+                <h1>Meu perfil</h1>
+                <p>Atualize suas informações e confira seus pedidos.</p>
+            </section>
+
+            <section class="cartao perfil-cartao">
+                <form class="formulario-padrao" id="form-perfil">
+                    <div class="perfil-identificacao">
+                        <p class="sobretitulo">Dados do cliente</p>
+                        <label for="perfil-id">ID do cliente</label>
+                        <input id="perfil-id" name="id" type="text" value="C001" readonly>
+                    </div>
+                    <fieldset class="grupo-campos">
+                        <legend>Informações do perfil</legend>
+                        <label for="perfil-nome">Nome completo</label>
+                        <input id="perfil-nome" name="nome" type="text" minlength="3" required>
+                        <label for="perfil-email">E-mail</label>
+                        <input id="perfil-email" name="email" type="email" required>
+                        <label for="perfil-cpf">CPF</label>
+                        <input id="perfil-cpf" name="cpf" type="text" inputmode="numeric" required>
+                        <label for="perfil-senha">Nova senha</label>
+                        <input id="perfil-senha" name="senha" type="password" minlength="8">
+                        <label for="perfil-confirmacao">Confirmar nova senha</label>
+                        <input id="perfil-confirmacao" name="confirmacao" type="password" minlength="8">
+                    </fieldset>
+                    <button class="botao" type="button">Salvar alterações</button>
+                </form>
+            </section>
+
+            <section class="cartao tabela-wrapper">
+                <table class="tabela-padrao">
+                    <caption>Meus pedidos</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Pedido</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Itens</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><span class="status-pedido"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+        <footer class="rodape">
+            <a class="marca marca-rodape" href="index.html"><span>Adri</span>Express</a>
+            <p>Uma boa descoberta para cada dia.</p> <small>© 2026 AdriExpress. Projeto acadêmico.</small>
+        </footer>
+    </body>
+</html>
