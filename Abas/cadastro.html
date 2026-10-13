@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro | AdriExpress</title>
+        <link rel="stylesheet" href="../CSS/base.css">
+        <link rel="stylesheet" href="../CSS/cadastro.css">
+    </head>
+    <body>
+        <header class="cabecalho">
+            <div class="cabecalho-principal">
+                <a class="marca" href="index.html" aria-label="AdriExpress - início"><span>Adri</span>Express</a>
+                <input class="menu" type="checkbox" id="menu">
+                <label class="menu-icone" for="menu" aria-label="Abrir ou fechar menu"><span></span><span></span><span></span></label>
+                <nav class="navegacao" aria-label="Navegação principal">
+                    <a href="index.html">Início</a>
+                    <a href="loja.html">Produtos</a>
+                    
+                    <a href="Contato.html">Contato</a>
+                    <a href="cadastro.html" aria-current="page">Cadastro</a>
+                    <a href="login.html">Entrar</a>
+                    <a href="perfil.html">Perfil</a>
+                    <a href="relatorios.html">Administração</a>
+                </nav>
+            </div>
+        </header>
+        <main class="pagina pagina-formulario">
+            <section class="formulario-cartao">
+                <p class="sobretitulo">Faça parte</p>
+                <h1>Criar sua conta</h1>
+                <p class="texto-ajuda">Preencha seus dados para começar.</p>
+                <form class="formulario-padrao" id="form-cadastro">
+                    <fieldset class="grupo-campos">
+                        <legend>Dados para sua conta</legend>
+                        <label for="cadastro-nome">Nome completo</label>
+                        <input id="cadastro-nome" name="nome" type="text" minlength="3" required>
+                        <label for="cadastro-email">E-mail</label>
+                        <input id="cadastro-email" name="email" type="email" required>
+                        <label for="cadastro-cpf">CPF</label>
+                        <input id="cadastro-cpf" name="cpf" type="text" inputmode="numeric" title="Digite um CPF com 11 números, com ou sem pontuação." required>
+                        <label for="cadastro-senha">Senha</label>
+                        <input id="cadastro-senha" name="senha" type="password" minlength="8" required>
+                        <label for="cadastro-confirmacao">Confirmar senha</label>
+                        <input id="cadastro-confirmacao" name="confirmacao" type="password" minlength="8" required>
+                    </fieldset>
+                    <button class="botao botao-cheio" type="button">Criar conta</button>
+                </form>
+                <p class="alternativa-formulario">Já tem uma conta? <a href="login.html">Entrar</a></p>
+            </section>
+        </main>
+        <footer class="rodape">
+            <a class="marca marca-rodape" href="index.html"><span>Adri</span>Express</a>
+            <p>Uma boa descoberta para cada dia.</p> <small>© 2026 AdriExpress. Projeto acadêmico.</small>
+        </footer>
+    </body>
+</html>

@@ -88,7 +88,7 @@ button {
     background: #32618a;
 }
 
-.menu-alternar, .menu-icone {
+.menu, .menu-icone {
     display: none;
 }
 
@@ -197,7 +197,7 @@ h1, h2, h3 {
         flex-wrap: wrap;
     }
 
-    .menu-alternar {
+    .menu {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -218,7 +218,7 @@ h1, h2, h3 {
         background: white;
     }
 
-    .menu-alternar:focus-visible + .menu-icone {
+    .menu:focus-visible + .menu-icone {
         outline: 2px solid #d58b18;
     }
 
@@ -228,7 +228,7 @@ h1, h2, h3 {
         flex-direction: column;
     }
 
-    .menu-alternar:checked ~ .navegacao {
+    .menu:checked ~ .navegacao {
         display: flex;
     }
 
