@@ -1,14 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-    <link rel="stylesheet" href="../CSS/Contato.css">
-</head>
-<body>
-    <div id="header-placeholder"></div>
-
-</body>
-<script src="../Scripts/Contato.js"></script>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contato | AdriExpress</title>
+        <link rel="stylesheet" href="../CSS/base.css">
+        <link rel="stylesheet" href="../CSS/Contato.css">
+    </head>
+    <body>
+        <header class="cabecalho">
+            <div class="cabecalho-principal">
+                <a class="marca" href="index.html" aria-label="AdriExpress - início"><span>Adri</span>Express</a>
+                <input class="menu" type="checkbox" id="menu">
+                <label class="menu-icone" for="menu" aria-label="Abrir ou fechar menu de navegação"></label>
+                <nav class="navegacao" aria-label="Navegação principal">
+                    <a href="index.html">Início</a>
+                    <a href="loja.html">Produtos</a>
+                    
+                    <a href="Contato.html" aria-current="page">Contato</a>
+                    <a href="cadastro.html">Cadastro</a>
+                    <a href="login.html">Entrar</a>
+                    <a href="perfil.html">Perfil</a>
+                    <a href="relatorios.html">Administração</a>
+                </nav>
+            </div>
+        </header>
+        <main class="pagina">
+            <section class="introducao-pagina">
+                <p class="sobretitulo">AdriExpress</p>
+                <h1>Vamos conversar?</h1>
+                <p>Envie sua mensagem. Será um prazer ajudar.</p>
+            </section>
+            <div class="contato-layout">
+                <section class="cartao dados-contato">
+                    <h2>Informações de contato</h2>
+                    <p><strong>Endereço</strong>
+                        <br>
+                        Rua das Flores, 120 — Centro
+                        <br>
+                        Florianópolis, SC — 88010-200</p>
+                    <p><strong>Telefone</strong>
+                        <br>
+                        <a href="tel:+554830001234">(48) 3000-1234</a></p>
+                    <p><strong>E-mail</strong>
+                        <br>
+                        <a href="mailto:oi@adriexpress.com.br">oi@adriexpress.com.br</a></p>
+                    <p><strong>Horário de atendimento</strong>
+                        <br>
+                        Segunda a sexta, das 9h às 18h</p>
+                </section>
+                <form class="cartao formulario-padrao" id="form-contato">
+                    <h2>Envie uma mensagem</h2>
+                    <fieldset class="grupo-campos">
+                        <legend>Seus dados e mensagem</legend>
+                        <label for="contato-nome">Nome</label>
+                        <input id="contato-nome" name="nome" type="text" required>
+                        <label for="contato-email">E-mail</label>
+                        <input id="contato-email" name="email" type="email" required>
+                        <label for="contato-mensagem">Mensagem</label>
+                        <textarea id="contato-mensagem" name="mensagem" rows="5" required>
+                        </textarea>
+                    </fieldset>
+                    <button class="botao" type="button">Enviar mensagem</button>
+                </form>
+            </div>
+        </main>
+        <footer class="rodape">
+            <a class="marca marca-rodape" href="index.html"><span>Adri</span>Express</a>
+            <p>Uma boa descoberta para cada dia.</p> <small>© 2026 AdriExpress. Projeto acadêmico.</small>
+        </footer>
+    </body>
 </html>

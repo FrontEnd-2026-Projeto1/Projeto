@@ -1,3 +1,34 @@
-body {
-    background-color: #b30606;
+.contato-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.dados-contato p {
+    line-height: 1.5;
+}
+
+.dados-contato a {
+    text-decoration: none;
+}
+
+.grupo-campos {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    border: 0;
+}
+
+.grupo-campos legend {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .contato-layout {
+        grid-template-columns: 1fr;
+    }
+
 }
