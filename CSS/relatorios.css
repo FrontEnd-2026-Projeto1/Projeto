@@ -1,0 +1,121 @@
+.cabecalho-admin, .rodape-admin {
+    background: #333;
+}
+
+.cabecalho-relatorio {
+    margin-bottom: 24px;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    background: white;
+}
+
+.cabecalho-relatorio h1 {
+    margin-top: 0;
+}
+
+.emissao-relatorio {
+    margin: auto 0;
+}
+
+.secao-admin {
+    margin-bottom: 28px;
+}
+
+.cabecalho-tabela {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.busca-relatorio {
+    display: flex;
+    gap: 8px;
+}
+
+.busca-relatorio input, .busca-relatorio select {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+.busca-relatorio input {
+    max-width: 180px;
+}
+
+.rotulo-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+.tabela-wrapper {
+    overflow-x: auto;
+    background: white;
+}
+
+.tabela-padrao {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabela-padrao caption {
+    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.tabela-padrao th, .tabela-padrao td {
+    padding: 10px;
+    border: 1px solid var(--borda);
+}
+
+.tabela-padrao thead {
+    background: #e6edf3;
+}
+
+@media (max-width: 767px) {
+    .cabecalho-relatorio, .cabecalho-tabela {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .busca-relatorio {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .cabecalho-relatorio {
+        flex-direction: column;
+    }
+
+    .busca-relatorio input {
+        width: 100%;
+        max-width: none;
+    }
+
+}
+
+@media print {
+    .cabecalho-admin, .rodape-admin, .busca-relatorio {
+        display: none;
+    }
+
+    .pagina-admin {
+        width: 100%;
+    }
+
+    .cabecalho-relatorio {
+        border-bottom: 1px solid #333;
+    }
+
+}

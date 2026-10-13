@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Área administrativa | AdriExpress</title>
+        <link rel="stylesheet" href="../CSS/base.css">
+        <link rel="stylesheet" href="../CSS/relatorios.css">
+    </head>
+    <body>
+        <header class="cabecalho cabecalho-admin">
+            <div class="cabecalho-principal">
+                <a class="marca" href="index.html" aria-label="AdriExpress - início"><span>Adri</span>Express</a>
+                <input class="menu" type="checkbox" id="menu">
+                <label class="menu-icone" for="menu" aria-label="Abrir ou fechar menu"><span></span><span></span><span></span></label>
+                <nav class="navegacao" aria-label="Navegação administrativa">
+                    <a href="index.html">Voltar à loja</a>
+                    <a href="relatorios.html" aria-current="page">Relatórios</a>
+                </nav>
+            </div>
+        </header>
+        <main class="pagina pagina-admin">
+            <section class="cabecalho-relatorio">
+                <div>
+                    <p class="sobretitulo">Painel interno</p>
+                    <h1>Área administrativa</h1>
+                    <p>Relatórios e consultas da AdriExpress</p>
+                </div>
+                <p class="emissao-relatorio"><strong>Emitido em</strong>
+                    <br>
+                    13/10/2026 às 16h30</p>
+            </section>
+            <section class="secao-admin">
+                <div class="cabecalho-tabela">
+                    <div>
+                        <p class="sobretitulo">Base de clientes</p>
+                        <h2>Relatório de clientes</h2>
+                    </div>
+                    <form class="busca-relatorio" id="busca-clientes">
+                        <label class="rotulo-oculto" for="criterio-cliente">Buscar cliente por</label>
+                        <select id="criterio-cliente" name="criterio">
+                            <option>Nome</option>
+                            <option>ID</option>
+                            <option>E-mail</option>
+                            <option>CPF</option>
+                        </select>
+                        <label class="rotulo-oculto" for="termo-cliente">Termo de busca</label>
+                        <input id="termo-cliente" name="termo" type="text">
+                        <button class="botao botao-secundario" type="button">Buscar</button>
+                    </form>
+                </div>
+                <div class="tabela-wrapper">
+                    <table class="tabela-padrao">
+                        <caption>Clientes cadastrados — dados de demonstração</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">CPF</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </section>
+            <section class="secao-admin">
+                <div class="cabecalho-tabela">
+                    <div>
+                        <p class="sobretitulo">Vendas</p>
+                        <h2>Relatório de compras</h2>
+                    </div>
+                    <form class="busca-relatorio" id="busca-compras">
+                        <label class="rotulo-oculto" for="criterio-compra">Buscar compra por</label>
+                        <select id="criterio-compra" name="criterio">
+                            <option>ID</option>
+                            <option>Cliente</option>
+                            <option>Data</option>
+                            <option>Valor</option>
+                            <option>Produto</option>
+                        </select>
+                        <label class="rotulo-oculto" for="termo-compra">Termo de busca</label>
+                        <input id="termo-compra" name="termo" type="text">
+                        <button class="botao botao-secundario" type="button">Buscar</button>
+                    </form>
+                </div>
+                <div class="tabela-wrapper">
+                    <table class="tabela-padrao">
+                        <caption>Compras realizadas — dados de demonstração</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID da compra</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Produtos</th>
+                                <th scope="col">Qtd.</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer class="rodape rodape-admin">
+            <p>AdriExpress · Área administrativa</p> <small>Relatórios com dados fictícios para fins acadêmicos.</small>
+        </footer>
+    </body>
+</html>
