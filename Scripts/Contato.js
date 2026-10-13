@@ -1,10 +1,11 @@
 fetch('../Templates/LogoPG.html')
     .then(response => response.text())
     .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
+        document.getElementById('header-abas').innerHTML = data;
 
-        const paginaAtual = window.location.pathname.split('/').pop().toLowerCase();
-                
+        const paginaAtual = window.location.pathname.split('/').pop().toLowerCase();        
+        document.querySelectorAll('.aba-nav').forEach(el => el.classList.remove('active'));
+
         if (paginaAtual.includes('produtos')) {
             document.getElementById('tab-produtos').classList.add('active');
         } else if (paginaAtual.includes('compras')) {
@@ -14,4 +15,4 @@ fetch('../Templates/LogoPG.html')
         } else {
             document.getElementById('tab-inicio').classList.add('active');
         }
-});
+    });
