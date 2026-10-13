@@ -1,0 +1,165 @@
+.destaque {
+    min-height: 320px;
+    padding: 28px max(20px, calc((100% - 1050px) / 2));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
+    color: white;
+    background: var(--azul);
+}
+
+.destaque h1, .destaque .sobretitulo {
+    color: white;
+}
+
+.destaque .botao {
+    color: var(--azul);
+    background: white;
+}
+
+.destaque-imagem img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.secao {
+    width: min(100% - 32px, 1050px);
+    margin: auto;
+    padding: 40px 0;
+}
+
+.conteudo-loja, .contato-resumo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.texto-loja p {
+    line-height: 1.6;
+}
+
+.fotos-loja {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.fotos-loja figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: white;
+}
+
+.fotos-loja img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.fotos-loja figcaption {
+    padding: 8px;
+}
+
+.cabecalho-secao {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.cartao-produto {
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    background: white;
+}
+
+.cartao-produto > img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.produto-corpo {
+    padding: 14px;
+}
+
+.produto-corpo h3 {
+    margin: 6px 0;
+    font-size: 1.05rem;
+}
+
+.produto-corpo p {
+    min-height: 42px;
+    color: #555;
+}
+
+.produto-corpo strong {
+    display: block;
+    margin: 12px 0;
+}
+
+.produto-corpo .botao {
+    width: 100%;
+}
+
+.contato-resumo {
+    margin-bottom: 32px;
+    padding: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background: white;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .grade-produtos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 767px) {
+    .destaque, .conteudo-loja, .contato-resumo {
+        grid-template-columns: 1fr;
+    }
+
+    .destaque {
+        padding: 24px;
+    }
+
+    .destaque-imagem img {
+        height: 180px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 320px) {
+    .secao, .contato-resumo {
+        width: calc(100% - 24px);
+    }
+
+    .grade-produtos, .fotos-loja {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho-secao {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
