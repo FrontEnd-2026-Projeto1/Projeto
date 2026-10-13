@@ -1,0 +1,246 @@
+:root {
+    --azul: #174a78;
+    --fundo: #f4f6f8;
+    --borda: #d5dce3;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: var(--fundo);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 280px;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: var(--azul);
+}
+
+a:hover {
+    color: #092d50;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid #d58b18;
+    outline-offset: 2px;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.cabecalho, .rodape {
+    color: white;
+    background: var(--azul);
+}
+
+.cabecalho-principal {
+    max-width: 1100px;
+    min-height: 68px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.marca {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.marca span {
+    color: #b5dced;
+}
+
+.navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.navegacao a {
+    padding: 9px;
+    color: white;
+    text-decoration: none;
+}
+
+.navegacao a:hover, .navegacao a[aria-current="page"] {
+    background: #32618a;
+}
+
+.menu-alternar, .menu-icone {
+    display: none;
+}
+
+.pagina {
+    width: min(100% - 32px, 1050px);
+    margin: auto;
+    padding: 32px 0 48px;
+    flex: 1;
+}
+
+.introducao-pagina {
+    margin-bottom: 24px;
+}
+
+h1, h2, h3 {
+    color: #193e60;
+}
+
+.sobretitulo {
+    margin-bottom: 6px;
+    color: #42627e;
+    font-size: .85rem;
+    font-weight: bold;
+}
+
+.botao {
+    padding: 10px 14px;
+    display: inline-block;
+    border: 1px solid var(--azul);
+    border-radius: 8px;
+    color: white;
+    background: var(--azul);
+    text-align: center;
+    text-decoration: none;
+    transition: background .15s;
+}
+
+.botao:hover {
+    color: white;
+    background: #32618a;
+}
+
+.botao:active {
+    opacity: .8;
+}
+
+.botao-secundario {
+    color: var(--azul);
+    background: white;
+}
+
+.botao-cheio {
+    width: 100%;
+}
+
+.cartao, .formulario-cartao, .resumo-pedido {
+    padding: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background: white;
+}
+
+.rodape {
+    margin-top: auto;
+    padding: 22px;
+    text-align: center;
+}
+
+.rodape p, .rodape small {
+    margin: 5px;
+}
+
+.formulario-padrao, .form-contato {
+    display: grid;
+    gap: 10px;
+}
+
+.formulario-padrao label, .form-contato label {
+    font-weight: bold;
+}
+
+.formulario-padrao input, .formulario-padrao select, .formulario-padrao textarea, .form-contato input, .form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+.formulario-padrao textarea, .form-contato textarea {
+    min-height: 90px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cabecalho-principal {
+        flex-wrap: wrap;
+    }
+
+    .navegacao {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .cabecalho-principal {
+        flex-wrap: wrap;
+    }
+
+    .menu-alternar {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+
+    .menu-icone {
+        width: 40px;
+        padding: 9px;
+        display: grid;
+        gap: 5px;
+        border: 1px solid white;
+        border-radius: 8px;
+    }
+
+    .menu-icone span {
+        height: 2px;
+        background: white;
+    }
+
+    .menu-alternar:focus-visible + .menu-icone {
+        outline: 2px solid #d58b18;
+    }
+
+    .navegacao {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-alternar:checked ~ .navegacao {
+        display: flex;
+    }
+
+}
+
+@media (max-width: 320px) {
+    body {
+        min-width: 0;
+    }
+
+    .pagina {
+        width: calc(100% - 24px);
+    }
+
+}

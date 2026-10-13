@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore o catálogo de produtos da AdriExpress.">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/loja.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho-principal">
+            <a class="marca" href="index.html" aria-label="AdriExpress - início">
+                <span>Adri</span>Express
+            </a>
+
+            <input class="menu-alternar" type="checkbox" id="menu-alternar">
+            <label class="menu-icone" for="menu-alternar" aria-label="Abrir ou fechar menu de navegação">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="navegacao" aria-label="Navegação principal">
+                <a href="index.html">Início</a>
+                <a href="loja.html" aria-current="page">Produtos</a>
+                <a href="Contato.html">Contato</a>
+                <a href="cadastro.html">Cadastro</a>
+                <a href="login.html">Entrar</a>
+                <a href="perfil.html">Perfil</a>
+                <a href="relatorios.html">Administração</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina">
+        <section class="introducao-pagina">
+            <p class="sobretitulo">Catálogo AdriExpress</p>
+            <h1>Nossos produtos</h1>
+            <p>Encontre algo especial entre as novidades da loja.</p>
+        </section>
+
+        <form class="filtros-catalogo" id="filtros-catalogo">
+            <label for="busca-produto">
+                Buscar produto
+                <input id="busca-produto" name="busca" type="search">
+            </label>
+
+            <label for="categoria-produto">
+                Categoria
+                <select id="categoria-produto" name="categoria">
+                    <option>Todas as categorias</option>
+                    <option>Acessórios</option>
+                    <option>Tecnologia</option>
+                    <option>Calçados</option>
+                    <option>Casa e bem-estar</option>
+                </select>
+            </label>
+
+            <label for="preco-produto">
+                Faixa de preço
+                <select id="preco-produto" name="preco">
+                    <option>Todos os preços</option>
+                    <option>Até R$ 50</option>
+                    <option>R$ 50 a R$ 150</option>
+                    <option>Acima de R$ 150</option>
+                </select>
+            </label>
+
+            <label for="ordem-produto">
+                Ordenar por
+                <select id="ordem-produto" name="ordem">
+                    <option>Mais relevantes</option>
+                    <option>Menor preço</option>
+                    <option>Maior preço</option>
+                    <option>Nome</option>
+                </select>
+            </label>
+
+            <button class="botao botao-secundario" type="button">Filtrar</button>
+        </form>
+
+        <section class="grade-produtos" aria-label="Catálogo de produtos">
+            <article class="cartao-produto">
+                <img src="../Imgs/relogio-mini.avif" alt="Relógio minimalista">
+                <div class="produto-corpo">
+                    <span class="categoria-tag">Acessórios</span>
+                    <h2>Relógio Minimalista</h2>
+                    <p>Relógio elegante com pulseira em couro sintético.</p>
+                    <strong>R$ 149,90</strong>
+                    <button class="botao botao-secundario" type="button">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="cartao-produto">
+                <img src="../Imgs/headset.avif" alt="Fone de ouvido ">
+                <div class="produto-corpo">
+                    <span class="categoria-tag">Tecnologia</span>
+                    <h2>Fone Bluetooth Pro</h2>
+                    <p>Som estéreo de alta fidelidade com conexão sem fio.</p>
+                    <strong>R$ 229,90</strong>
+                    <button class="botao botao-secundario" type="button">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="cartao-produto">
+                <img src="../Imgs/tenis-vermelho.avif" alt="Tênis esportivo vermelho">
+                <div class="produto-corpo">
+                    <span class="categoria-tag">Calçados</span>
+                    <h2>Tênis Esportivo Runner</h2>
+                    <p>Para corridas leves, caminhadas e uso diário.</p>
+                    <strong>R$ 99,90</strong>
+                    <button class="botao botao-secundario" type="button">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="cartao-produto">
+                <img src="../Imgs/oculos-escuros.avif" alt="Óculos de sol">
+                <div class="produto-corpo">
+                    <span class="categoria-tag">Acessórios</span>
+                    <h2>Óculos de Sol Classic</h2>
+                    <p>Proteção UV400 em uma armação resistente.</p>
+                    <strong>R$ 99,90</strong>
+                    <button class="botao botao-secundario" type="button">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="cartao-produto">
+                <img src="../Imgs/tenis-preto.avif" alt="Tênis preto">
+                <div class="produto-corpo">
+                    <span class="categoria-tag">Calçados</span>
+                    <h2>Tênis Impermeável</h2>
+                    <p>Design moderno e conforto para qualquer clima.</p>
+                    <strong>R$ 199,90</strong>
+                    <button class="botao botao-secundario" type="button">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="cartao-produto">
+                <img src="../Imgs/camera.avif" alt="Câmera">
+                <div class="produto-corpo">
+                    <span class="categoria-tag">Tecnologia</span>
+                    <h2>Câmera Instantânea</h2>
+                    <p>Capture e imprima fotos para guardar momentos.</p>
+                    <strong>R$ 399,00</strong>
+                    <button class="botao botao-secundario" type="button">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="cartao-produto">
+                <img src="../Imgs/perfume.avif" alt="Frasco de perfume">
+                <div class="produto-corpo">
+                    <span class="categoria-tag">Bem-estar</span>
+                    <h2>Perfume Clássico</h2>
+                    <p>Fragrância marcante para acompanhar o seu dia.</p>
+                    <strong>R$ 99,90</strong>
+                    <button class="botao botao-secundario" type="button">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="cartao-produto">
+                <img src="../Imgs/headset-fio.avif" alt="Headset com fio">
+                <div class="produto-corpo">
+                    <span class="categoria-tag">Tecnologia</span>
+                    <h2>Headset com Fio</h2>
+                    <p>Áudio confortável para computador e consoles.</p>
+                    <strong>R$ 199,90</strong>
+                    <button class="botao botao-secundario" type="button">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="cartao-produto">
+                <img src="../Imgs/relogio-digital.avif" alt="Relógio digital">
+                <div class="produto-corpo">
+                    <span class="categoria-tag">Tecnologia</span>
+                    <h2>Smartwatch Fit</h2>
+                    <p>Acompanhe sua rotina com praticidade no pulso.</p>
+                    <strong>R$ 319,90</strong>
+                    <button class="botao botao-secundario" type="button">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="cartao-produto">
+                <img src="../Imgs/laranja.avif" alt="Laranja">
+                <div class="produto-corpo">
+                    <span class="categoria-tag">Bem-estar</span>
+                    <h2>Laranja Fresquinha</h2>
+                    <p>Fruta tropical saborosa e rica em vitamina C.</p>
+                    <strong>R$ 9,90</strong>
+                    <button class="botao botao-secundario" type="button">Adicionar ao carrinho</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <a class="marca marca-rodape" href="index.html">
+            <span>Adri</span>Express
+        </a>
+        <p>Uma boa descoberta para cada dia.</p>
+        <small>© 2026 AdriExpress. Projeto acadêmico.</small>
+    </footer>
+</body>
+</html>
