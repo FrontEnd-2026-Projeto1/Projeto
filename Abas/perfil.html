@@ -30,11 +30,11 @@
             <section class="introducao-pagina">
                 <p class="sobretitulo">Sua conta</p>
                 <h1>Meu perfil</h1>
-                <p>Atualize suas informações e confira seus pedidos.</p>
+                <p>Veja e atualize seus dados.</p>
             </section>
 
             <section class="cartao perfil-cartao">
-                <form class="formulario-padrao" id="form-perfil">
+                <form class="formulario-padrao" id="form-perfil" novalidate>
                     <div class="perfil-identificacao">
                         <p class="sobretitulo">Dados do cliente</p>
                         <label for="perfil-id">ID do cliente</label>
@@ -43,19 +43,41 @@
                     <fieldset class="grupo-campos">
                         <legend>Informações do perfil</legend>
                         <label for="perfil-nome">Nome completo</label>
-                        <input id="perfil-nome" name="nome" type="text" minlength="3" required>
+                        <input id="perfil-nome" name="nome" type="text" autocomplete="name" required aria-describedby="erro-perfil-nome">
+                        <small class="erro-campo" id="erro-perfil-nome" data-error-for="nome" aria-live="polite"></small>
                         <label for="perfil-email">E-mail</label>
-                        <input id="perfil-email" name="email" type="email" required>
+                        <input id="perfil-email" name="email" type="email" autocomplete="email" required aria-describedby="erro-perfil-email">
+                        <small class="erro-campo" id="erro-perfil-email" data-error-for="email" aria-live="polite"></small>
+                        <label for="perfil-telefone">Telefone</label>
+                        <input id="perfil-telefone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="11" required aria-describedby="erro-perfil-telefone">
+                        <small class="erro-campo" id="erro-perfil-telefone" data-error-for="telefone" aria-live="polite"></small>
                         <label for="perfil-cpf">CPF</label>
-                        <input id="perfil-cpf" name="cpf" type="text" inputmode="numeric" required>
+                        <input id="perfil-cpf" name="cpf" type="text" inputmode="numeric" maxlength="14" required aria-describedby="erro-perfil-cpf">
+                        <small class="erro-campo" id="erro-perfil-cpf" data-error-for="cpf" aria-live="polite"></small>
+                        <label for="perfil-senha-atual">Senha atual (para trocar a senha)</label>
+                        <input id="perfil-senha-atual" name="senhaAtual" type="password" autocomplete="current-password" aria-describedby="erro-perfil-senhaAtual">
+                        <small class="erro-campo" id="erro-perfil-senhaAtual" data-error-for="senhaAtual" aria-live="polite"></small>
                         <label for="perfil-senha">Nova senha</label>
-                        <input id="perfil-senha" name="senha" type="password" minlength="8">
+                        <input id="perfil-senha" name="senha" type="password" autocomplete="new-password" aria-describedby="erro-perfil-senha">
+                        <small class="erro-campo" id="erro-perfil-senha" data-error-for="senha" aria-live="polite"></small>
                         <label for="perfil-confirmacao">Confirmar nova senha</label>
-                        <input id="perfil-confirmacao" name="confirmacao" type="password" minlength="8">
+                        <input id="perfil-confirmacao" name="confirmacao" type="password" autocomplete="new-password" aria-describedby="erro-perfil-confirmacao">
+                        <small class="erro-campo" id="erro-perfil-confirmacao" data-error-for="confirmacao" aria-live="polite"></small>
                     </fieldset>
-                    <button class="botao" type="button">Salvar alterações</button>
+                    <p id="perfil-mensagem" class="mensagem-formulario" role="status" aria-live="polite"></p>
+                    <button class="botao" type="submit">Salvar alterações</button>
+                    <button class="botao botao-perigo" id="abrir-exclusao" type="button">Excluir conta</button>
                 </form>
             </section>
+
+            <dialog class="dialogo-confirmacao" id="confirmar-exclusao" aria-labelledby="titulo-exclusao">
+                <h2 id="titulo-exclusao">Excluir conta</h2>
+                <p>Quer mesmo excluir sua conta? Não será possível desfazer. Seus pedidos continuarão salvos.</p>
+                <div class="acoes-dialogo">
+                    <button class="botao botao-secundario" id="cancelar-exclusao" type="button">Cancelar</button>
+                    <button class="botao botao-perigo" id="confirmar-exclusao-conta" type="button">Excluir minha conta</button>
+                </div>
+            </dialog>
 
             <section class="cartao tabela-wrapper">
                 <table class="tabela-padrao">
@@ -86,5 +108,6 @@
             <a class="marca marca-rodape" href="index.html"><span>Adri</span>Express</a>
             <p>Uma boa descoberta para cada dia.</p> <small>© 2026 AdriExpress. Projeto acadêmico.</small>
         </footer>
+        <script type="module" src="../Scripts/app.js"></script>
     </body>
 </html>
