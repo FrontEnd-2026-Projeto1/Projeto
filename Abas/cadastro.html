@@ -27,24 +27,34 @@
         </header>
         <main class="pagina pagina-formulario">
             <section class="formulario-cartao">
-                <p class="sobretitulo">Faça parte</p>
-                <h1>Criar sua conta</h1>
-                <p class="texto-ajuda">Preencha seus dados para começar.</p>
-                <form class="formulario-padrao" id="form-cadastro">
+                <p class="sobretitulo">Cadastro</p>
+                <h1>Crie sua conta</h1>
+                <p class="texto-ajuda">Informe seus dados para se cadastrar.</p>
+                <form class="formulario-padrao" id="form-cadastro" novalidate>
                     <fieldset class="grupo-campos">
-                        <legend>Dados para sua conta</legend>
+                        <legend>Seus dados</legend>
                         <label for="cadastro-nome">Nome completo</label>
-                        <input id="cadastro-nome" name="nome" type="text" minlength="3" required>
-                        <label for="cadastro-email">E-mail</label>
-                        <input id="cadastro-email" name="email" type="email" required>
-                        <label for="cadastro-cpf">CPF</label>
-                        <input id="cadastro-cpf" name="cpf" type="text" inputmode="numeric" title="Digite um CPF com 11 números, com ou sem pontuação." required>
-                        <label for="cadastro-senha">Senha</label>
-                        <input id="cadastro-senha" name="senha" type="password" minlength="8" required>
-                        <label for="cadastro-confirmacao">Confirmar senha</label>
-                        <input id="cadastro-confirmacao" name="confirmacao" type="password" minlength="8" required>
-                    </fieldset>
-                    <button class="botao botao-cheio" type="button">Criar conta</button>
+                    <input id="cadastro-nome" name="nome" type="text" autocomplete="name" required aria-describedby="erro-cadastro-nome">
+                    <small class="erro-campo" id="erro-cadastro-nome" data-error-for="nome" aria-live="polite"></small>
+                    <label for="cadastro-email">E-mail</label>
+                    <input id="cadastro-email" name="email" type="email" autocomplete="email" required aria-describedby="erro-cadastro-email">
+                    <small class="erro-campo" id="erro-cadastro-email" data-error-for="email" aria-live="polite"></small>
+                    <label for="cadastro-telefone">Telefone</label>
+                    <input id="cadastro-telefone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="11" required aria-describedby="erro-cadastro-telefone">
+                    <small class="erro-campo" id="erro-cadastro-telefone" data-error-for="telefone" aria-live="polite"></small>
+                    <label for="cadastro-cpf">CPF</label>
+                    <input id="cadastro-cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off" maxlength="14" title="Digite um CPF com 11 números." required aria-describedby="erro-cadastro-cpf">
+                    <small class="erro-campo" id="erro-cadastro-cpf" data-error-for="cpf" aria-live="polite"></small>
+                    <label for="cadastro-senha">Senha</label>
+                    <input id="cadastro-senha" name="senha" type="password" autocomplete="new-password" required aria-describedby="erro-cadastro-senha">
+                    <meter id="forca-senha" class="medidor-senha" min="0" max="4" value="0" aria-label="Força da senha: não informada">Não informada</meter>
+                    <small class="erro-campo" id="erro-cadastro-senha" data-error-for="senha" aria-live="polite"></small>
+                    <label for="cadastro-confirmacao">Confirmar senha</label>
+                    <input id="cadastro-confirmacao" name="confirmacao" type="password" autocomplete="new-password" required aria-describedby="erro-cadastro-confirmacao">
+                    <small class="erro-campo" id="erro-cadastro-confirmacao" data-error-for="confirmacao" aria-live="polite"></small>
+                </fieldset>
+                <p id="cadastro-mensagem" class="mensagem-formulario" role="status" aria-live="polite"></p>
+                <button class="botao botao-cheio" type="submit">Criar conta</button>
                 </form>
                 <p class="alternativa-formulario">Já tem uma conta? <a href="login.html">Entrar</a></p>
             </section>
@@ -53,5 +63,6 @@
             <a class="marca marca-rodape" href="index.html"><span>Adri</span>Express</a>
             <p>Uma boa descoberta para cada dia.</p> <small>© 2026 AdriExpress. Projeto acadêmico.</small>
         </footer>
+        <script type="module" src="../Scripts/app.js"></script>
     </body>
 </html>
